@@ -8,7 +8,9 @@ I know macros are not allowed. And this macro will reduce your sales. But I just
 
 Disclaimers to the Users:
 
-Using macros in ATD is not allowed I think. And you need autohotkey v2 for the macro to work.
+Using macros in ATD are strictly not allowed; using Kraken Macro is your own problem. And you need autohotkey v2 for the macro to work.
+
+Also MrUptime. You can ask me anytime to remove this macro, I know it's not allowed but please send me a warning before you ban me.
 
 
 I feel lazy to add more text so, see ya!
