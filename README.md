@@ -10,4 +10,6 @@ Disclaimers to the Users:
 
 Using macros in ATD is not allowed I think. And you need autohotkey v2 for the macro to work.
 
+[📥 Click here to download the AutoHotkey script]()
+
 I feel lazy to add more text so, see ya!
