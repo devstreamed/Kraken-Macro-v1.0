@@ -22,18 +22,7 @@ SetMouseDelay 10
 ; Phase 1: Casting | Phase 2: Shaking | Phase 3: Finished, restarting loop
 ; Triads = the first 3 shake clicks of every cast (their own settings)
 
-; ---------- credit tag ----------
-global CREDIT := Chr(68) Chr(101) Chr(118) Chr(83) Chr(116) Chr(114) Chr(101) Chr(97) Chr(109) Chr(101) Chr(100)
-CreditOK() {
-    total := 0
-    for ch in StrSplit(CREDIT)
-        total += Ord(ch)
-    return (total = 1108 && StrLen(CREDIT) = 11)
-}
-if !CreditOK() {
-    MsgBox "The credit tag was modified. This macro will not run without it."
-    ExitApp
-}
+
 
 global running := false
 global capW := 0, capH := 0, hdcMem := 0, hbm := 0, pBits := 0
