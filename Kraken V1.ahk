@@ -155,16 +155,7 @@ UpdateScroll()
 RefreshPresets()
 SetTimer(CheckCredit, 1000)
 
-; keeps the credit tag in place (restores it if it is changed or hidden)
-CheckCredit() {
-    if !CreditOK() {
-        ExitApp
-    }
-    want := "Made by " CREDIT
-    if (creditText.Value != want)
-        creditText.Value := want
-    if !creditText.Visible
-        creditText.Visible := true
+
     title := "Kraken V1 - by " CREDIT
     if (gui1.Title != title)
         gui1.Title := title
