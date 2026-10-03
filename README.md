@@ -1,4 +1,4 @@
-This macro was created by an individual named DevStreamed (Me)
+This macro was created by an anonymous individual
 
 Disclaimers to the Devs of ATD:
 
