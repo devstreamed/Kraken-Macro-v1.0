@@ -10,7 +10,7 @@ Disclaimers to the Users:
 
 Using macros in ATD is not allowed I think. And you need autohotkey v2 for the macro to work.
 
-[📥 Click here to download the AutoHotkey script](https://raw.githubusercontent.com/devstreamed/Kraken-Macro-v1.0/refs/heads/main/Kraken%20V1.ahk)
+[📥 Click here to download the AutoHotkey script](https://download.githubusercontent.com/devstreamed/Kraken-Macro-v1.0/refs/heads/main/Kraken%20V1.ahk)
 
 
 I feel lazy to add more text so, see ya!
