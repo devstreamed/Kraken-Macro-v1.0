@@ -22,6 +22,19 @@ SetMouseDelay 10
 ; Phase 1: Casting | Phase 2: Shaking | Phase 3: Finished, restarting loop
 ; Triads = the first 3 shake clicks of every cast (their own settings)
 
+; ---------- credit tag ----------
+global CREDIT := Chr(68) Chr(101) Chr(118) Chr(83) Chr(116) Chr(114) Chr(101) Chr(97) Chr(109) Chr(101) Chr(100)
+CreditOK() {
+    total := 0
+    for ch in StrSplit(CREDIT)
+        total += Ord(ch)
+    return (total = 1108 && StrLen(CREDIT) = 11)
+}
+if !CreditOK() {
+    MsgBox "The credit tag was modified. This macro will not run without it."
+    ExitApp
+}
+
 global running := false
 global capW := 0, capH := 0, hdcMem := 0, hbm := 0, pBits := 0
 global baseBuf := 0, curBuf := 0
@@ -30,7 +43,7 @@ global baseBuf := 0, curBuf := 0
 global presetDir := A_AppData "\Kraken V1"
 global presetFile := presetDir "\presets.txt"
 
-global gui1 := Gui("+AlwaysOnTop +Resize +0x200000", "Kraken V1")
+global gui1 := Gui("+AlwaysOnTop +Resize +0x200000", "Kraken V1 - by " CREDIT)
 gui1.SetFont("s9")
 
 AddRow(label, default, sec := false) {
@@ -61,6 +74,8 @@ delBtn := gui1.Add("Button", "x+5 yp w105", "Delete")
 delBtn.OnEvent("Click", (*) => DeletePreset())
 
 stText := gui1.Add("Text", "xm y+10 w330 Center", "Status: STOPPED   |   F3 start/stop  F5 refresh  F1 close")
+creditText := gui1.Add("Text", "xm w330 Center", "Made by " CREDIT)
+creditText.SetFont("s9 bold")
 
 tab := gui1.Add("Tab3", "xm y+10 w330 h300", ["Radar", "Casting", "Triads", "Fish"])
 
@@ -138,7 +153,13 @@ contentH := fullH
 gui1.Move(gx, 20, gw, Min(gh, A_ScreenHeight - 120))   ; fit the screen, scroll for the rest
 UpdateScroll()
 RefreshPresets()
+SetTimer(CheckCredit, 1000)
 
+
+    title := "Kraken V1 - by " CREDIT
+    if (gui1.Title != title)
+        gui1.Title := title
+}
 
 ; ---------- phase label (top of screen) ----------
 global phaseGui := Gui("+AlwaysOnTop -Caption +ToolWindow +E0x20 -DPIScale")
@@ -198,7 +219,3 @@ LoadAllPresets() {
         if (SubStr(line, 1, 1) = "[" && SubStr(line, -1) = "]") {
             cur := SubStr(line, 2, StrLen(line) - 2)
             data[cur] := Map()
-        }
-    }
-    return data
-}
