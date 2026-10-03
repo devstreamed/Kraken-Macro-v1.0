@@ -12,6 +12,6 @@ Using macros in ATD are strictly not allowed; using Kraken Macro is your own pro
 
 Also MrUptime. You can ask me anytime to remove this macro, I know it's not allowed but please send me a warning before you ban me.
 
-[ Download | Kraken_V1.ahk ](sha256:bcc304bf5f4183bc29c21a435f8e3f7972590bc4be55dd3d13a37cd902f325b3)
+[ Download | Kraken_V1.ahk ](https://github.com/devstreamed/Kraken-Macro-v1.0/releases/download/KrakenVersions/Kraken.V1.1.ahk)
 
 I feel lazy to add more text so, see ya!
