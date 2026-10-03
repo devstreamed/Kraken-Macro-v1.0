@@ -1,7 +1,5 @@
 ;@Ahk2Exe-SetName Kraken V1
 ;@Ahk2Exe-SetDescription Kraken V1
-;@Ahk2Exe-SetCompanyName DevStreamed
-;@Ahk2Exe-SetCopyright Copyright (c) DevStreamed
 ;@Ahk2Exe-SetVersion 1.0.0
 ;@Ahk2Exe-UpdateManifest 1
 
